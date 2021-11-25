@@ -3,3 +3,6 @@ This is a Simple Store.  This Project Contains Two Views: The Main page and de P
 
 This is the Main Page 
 ![alt text](https://github.com/VMErik/bootstrap-simple-store/blob/master/img/captura1.PNG)
+
+And this is the Detail Page : 
+![alt text](https://github.com/VMErik/bootstrap-simple-store/blob/master/img/captura2.PNG)
