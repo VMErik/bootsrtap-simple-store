@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Store</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <script src="js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <!-- Esto es mi navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Onlie Store Example</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Collections</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Acessories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Sneackers</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input name="search" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-light" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Empezamos con el contenido -->
+    <div class="container">
+        <div class="row t-50">
+            <div class="col-md-2 my-5">
+                <h5>Collection</h5>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" checked>
+                    <label class="form-check-label mt-10" for="flexCheckDefault">
+                    Adidas
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label mt-10" for="flexCheckDefault">
+                      Dolce & Gabana
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                    <label class="form-check-label" for="flexCheckDefault">
+                      Gucci
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                    <label class="form-check-label" for="flexCheckDefault">
+                      Nike
+                    </label>
+                </div>
+                <hr>
+
+                <h5>Genre</h5>
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" checked>
+                    <label class="form-check-label" for="flexSwitchCheckDefault">Man</label>
+                </div>
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                    <label class="form-check-label" for="flexSwitchCheckDefault">Woman</label>
+                </div>
+
+                <hr>
+                <h5>By Price</h5>
+                <input type="range" class="form-range" min="0" max="10000" id="priceRange" value="0" onChange="modifylbl()">
+                <label id="lblRange" for=""> $ 0 - $100 </label>
+
+            </div>
+            <div class="col-md-10 my-2">
+
+                <!-- Aqui van todas las tarjetas de los productos -->
+                <div class="row">
+                    <!-- Esta es la cabecera de los productos -->
+                    <div class="row my-3">
+                        <div class="col-md-6">
+                            <h4> This is the Adidas Collection </h4>
+                        </div>
+                        <div class="col-md-6">
+                            <span class='badge badge-warning float-end' id='lblCartCount'> 4 </span>
+                            <i class="fas fa-shopping-cart fa-2x float-end mx-2"></i>
+                            <select class="form-select float-end" aria-label="Disabled select example" name="orderBy">
+                                <option selected>Order by</option>
+                                <option value="1">Price</option>
+                                <option value="2">Launch Date</option>
+                                <option value="3">Raiting</option>
+                            </select>
+                        </div>
+                    </div>
+                    <hr>
+                    <!-- Aqui van todo lo relacionado a los productos -->
+                    <div class="col-lg-4 col-md-6 col-xs-6 col-sm-6 product-cotainer">
+                        <div class="card" onclick="location.href='product.html'">
+                            <img src="img/adidas1.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Adidas #200</h5>
+                                <h6 class="price">$ 2,350.00</h6>
+                                <h6 class="price old">$ 3,850.00</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-xs-6 col-sm-6 product-cotainer">
+                        <div class="card" onclick="location.href='product.html'">
+                            <img src="img/adidas2.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Adidas #200</h5>
+                                <h6 class="price">$ 2,000.00</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-xs-6 col-sm-6 product-cotainer">
+                        <div class="card" onclick="location.href='product.html'">
+                            <img src="img/adidas3.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Adidas #200</h5>
+                                <h6 class="price">$ 1,200.00</h6>
+                                <h6 class="price old">$ 5,000.00</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-xs-6 col-sm-6 product-cotainer">
+                        <div class="card" onclick="location.href='product.html'">
+                            <img src="img/adidas4.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Adidas #200</h5>
+                                <h6 class="price">$ 2,350.00</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-xs-6 col-sm-6 product-cotainer">
+                        <div class="card" onclick="location.href='product.html'">
+                            <img src="img/adidas5.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Adidas #200</h5>
+                                <h6 class="price">$ 2,350.00</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-xs-6 col-sm-6 product-cotainer">
+                        <div class="card" onclick="location.href='product.html'">
+                            <img src="img/adidas6.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Adidas #200</h5>
+                                <h6 class="price">$ 850.00</h6>
+                                <h6 class="price old">$ 1,250.00</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-xs-6 col-sm-6 product-cotainer">
+                        <div class="card" onclick="location.href='product.html'">
+                            <img src="img/adidas7.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Adidas #200</h5>
+                                <h6 class="price">$ 2,350.00</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-xs-6 col-sm-6 product-cotainer">
+                        <div class="card" onclick="location.href='product.html'">
+                            <img src="img/adidas8.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Adidas #200</h5>
+                                <h6 class="price">$ 1,350.00</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-xs-6 col-sm-6 product-cotainer">
+                        <div class="card" onclick="location.href='product.html'">
+                            <img src="img/adidas9.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Adidas #200</h5>
+                                <h6 class="price">$ 2,350.00</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-center text-white">
+        <div class="container p-4 pb-0">
+            <section class="mb-4">
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-facebook-f"></i></a>
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-twitter"></i></a>
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-instagram"></i></a>
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-github"></i></a>
+            </section>
+            <!-- Section: Social media -->
+        </div>
+        <!-- Grid container -->
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2020 VMErik
+        </div>
+        <!-- Copyright -->
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
